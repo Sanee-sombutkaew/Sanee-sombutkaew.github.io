@@ -72,9 +72,12 @@ body {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
 }
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 28px;
 }
 .nav-links a {
@@ -86,6 +89,9 @@ body {
 }
 .nav-links a:hover,
 .nav-links a:focus-visible {
+  color: var(--navy);
+}
+.nav-links a.active {
   color: var(--navy);
 }
 .nav-toggle {
@@ -316,6 +322,45 @@ body {
 }
 .cert-tags .tag { background: var(--amber-soft); border-color: transparent; color: #6b4514; }
 
+/* Project landing pages (data analysis / operations & planning) */
+.project-hero {
+  padding: 64px 28px 40px;
+}
+.project-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+.project-hero .hero-bio { margin-bottom: 0; }
+
+.placeholder-panel {
+  margin: 8px 28px 80px;
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--surface);
+  border: 0.5px dashed var(--border);
+  border-radius: 12px;
+  padding: 48px 32px;
+  text-align: left;
+}
+.placeholder-panel h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.placeholder-panel p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 0 0 20px;
+  max-width: 520px;
+}
+.placeholder-panel .tag { background: var(--bg); }
+
 /* Footer */
 .footer {
   background: var(--navy);
@@ -371,6 +416,7 @@ body {
     background: var(--bg);
     border-bottom: 0.5px solid var(--border);
     flex-direction: column;
+    align-items: flex-start;
     padding: 16px 28px;
     gap: 16px;
     display: none;
